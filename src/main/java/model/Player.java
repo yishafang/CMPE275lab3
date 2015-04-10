@@ -2,14 +2,41 @@ package model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PLAYER")
 public class Player {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private long id;
+	
+	@Column(name = "FIRSTNAME", length = 100, nullable = false)
 	private String firstname;
+	
+	@Column(name = "LASTNAME", length = 100, nullable = false)
 	private String lastname;
+	
+	@Column(name = "EMAIL", length = 100, nullable = false)
 	private String email;
+	
+	@Column(name = "DESCRIPTION", length = 100, nullable = false)
 	private String description;
+	
+	@Column(name = "ADDRESS", length = 100, nullable = false)
 	private Address address;
+	
+	@Column(name = "SPONSOR", length = 100, nullable = false)
 	private Sponsor sponsor;
+	
+	@Column(name = "OPPONENTS", length = 100, nullable = false)
 	private List<Player> opponents;
 	
 	public long getId() {

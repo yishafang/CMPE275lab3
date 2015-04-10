@@ -1,9 +1,28 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "SPONSOR")
 public class Sponsor {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private long id;
+	
+	@Column(name = "NAME", length = 100, nullable = false)
 	private String name; 
+	
+	@Column(name = "DESCRIPTION", length = 100, nullable = false)
 	private String description; 
+	
+	@Column(name = "ADDRESS", length = 100, nullable = false)
 	private Address address;
 	
 	public long getId() {

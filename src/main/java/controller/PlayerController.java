@@ -40,12 +40,12 @@ public class PlayerController {
 		
 		player.setFirstname(newPlayer.getFirstname());
 		player.setLastname(newPlayer.getLastname());
-		player.setEmail(newPlayer.getEmail());
-		player.setDescription(newPlayer.getDescription());
-		address.setStreet(newAddress.getStreet());
-		address.setCity(newAddress.getCity());
-		address.setState(newAddress.getState());
-		address.setZip(newAddress.getZip());
+//		player.setEmail(newPlayer.getEmail());
+//		player.setDescription(newPlayer.getDescription());
+//		address.setStreet(newAddress.getStreet());
+//		address.setCity(newAddress.getCity());
+//		address.setState(newAddress.getState());
+//		address.setZip(newAddress.getZip());
 		System.out.println("first name: " + newPlayer.getFirstname());
 		
 		try {
@@ -53,17 +53,18 @@ public class PlayerController {
 			session.save(address);
 		    session.getTransaction().commit();
 		      
-		    model.addAttribute("id", player.getId());
+		    //model.addAttribute("id", player.getId());
 		    model.addAttribute("firstname", player.getFirstname());
 		    model.addAttribute("lastname", player.getLastname());
-		    model.addAttribute("email", player.getEmail());
-		    model.addAttribute("description", player.getDescription());
-		    model.addAttribute("street", address.getStreet());
+//		    model.addAttribute("email", player.getEmail());
+//		    model.addAttribute("description", player.getDescription());
+//		    model.addAttribute("street", address.getStreet());
 		}catch(Exception e) {
 	    	  e.printStackTrace();
 	    }
 
-		return "redirect:http://localhost:8080/cmpe275lab3/homepage/"+player.getFirstname();	
+		//return "redirect:http://localhost:8080/cmpe275lab3/homepage/"+player.getFirstname();
+		return "homepage";
 	}
 }
 		

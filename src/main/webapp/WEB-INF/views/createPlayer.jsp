@@ -15,13 +15,7 @@
 <div class="container">
   <h2>Create Player</h2>
   <p>Please enter player information.</p>
-  <form class="form-horizontal" role="form" method="post" action="homepage${firstname}">
-    <div class="form-group form-group-id">
-      <label class="col-sm-2 control-label" for="id">ID</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="text" name="id" id="userid" placeholder="ID">
-      </div>
-    </div>
+  <form class="form-horizontal" role="form" method="post" action="homepage">
     <div class="form-group form-group-fn">
       <label class="col-sm-2 control-label" for="firstname">First Name</label>
       <div class="col-sm-10">
